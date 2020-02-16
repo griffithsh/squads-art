@@ -1,7 +1,0 @@
-name: Peaceful Meadow
-
-tiles: // m,n tileid
-0 0 1, 0 1 1, 1 1 1
-
-interesting:
-0 0, 13 20

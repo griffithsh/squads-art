@@ -1,4 +1,5 @@
 #!/bin/sh
 
-tar -czf squads.resource *.overworld-recipe *.png
-
+tar -czf squads.data \
+    *.overworld-recipe \
+    *.png
