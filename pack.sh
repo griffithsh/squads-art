@@ -2,4 +2,5 @@
 
 tar -czf squads.data \
     *.overworld-recipe \
-    *.png
+    *.png \
+    *.performance-set
