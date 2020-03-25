@@ -1,0 +1,485 @@
+{
+    "name": "Villager",
+    "sexes": [
+        "XY"
+    ],
+    "idle": {
+        "n": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 2000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 48,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 750,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 24,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 300,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "s": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 2000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 48,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 750,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 24,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 300,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "ne": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 2000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 48,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 750,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 24,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 300,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "nw": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 2000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 48,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 750,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 24,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 300,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "se": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 2000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 48,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 750,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 24,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 300,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "sw": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 2000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 48,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 750,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 24,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            },
+            {
+                "durationMs": 300,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ]
+    },
+    "move": {
+        "n": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "s": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "ne": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "nw": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "se": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "sw": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ]
+    },
+    "attack": {
+        "n": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "s": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "ne": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "nw": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "se": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ],
+        "sw": [
+            {
+                "durationMs": 10000,
+                "sprite": {
+                    "texture": "figure.png",
+                    "x": 0,
+                    "y": 0,
+                    "w": 24,
+                    "h": 48,
+                    "offsetY": -16
+                }
+            }
+        ]
+    },
+    "spell": [
+        {
+            "durationMs": 10000,
+            "sprite": {
+                "texture": "figure.png",
+                "x": 0,
+                "y": 0,
+                "w": 24,
+                "h": 48,
+                "offsetY": -16
+            }
+        }
+    ],
+    "death": [
+        {
+            "durationMs": 10000,
+            "sprite": {
+                "texture": "figure.png",
+                "x": 0,
+                "y": 0,
+                "w": 24,
+                "h": 48,
+                "offsetY": -16
+            }
+        }
+    ],
+    "victory": [
+        {
+            "durationMs": 10000,
+            "sprite": {
+                "texture": "figure.png",
+                "x": 0,
+                "y": 0,
+                "w": 24,
+                "h": 48,
+                "offsetY": -16
+            }
+        }
+    ],
+    "attackApexMs": 200,
+    "spellApexMs": 1200
+}

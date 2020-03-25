@@ -1,5 +1,5 @@
 {
-    "name": "Template",
+    "name": "Wolf",
     "sexes": [
         "XX",
         "XY"
@@ -9,13 +9,13 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
-                    "offsetY": 0
+                    "offsetY": -4
                 }
             }
         ],
@@ -23,11 +23,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -37,11 +37,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -51,11 +51,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -65,11 +65,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -79,11 +79,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -95,11 +95,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -109,11 +109,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -123,11 +123,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -137,11 +137,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -151,11 +151,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -165,11 +165,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -181,11 +181,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -195,11 +195,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -209,11 +209,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -223,11 +223,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -237,11 +237,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -251,11 +251,11 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "wolf.png",
                     "x": 0,
                     "y": 0,
-                    "w": 8,
-                    "h": 8,
+                    "w": 58,
+                    "h": 48,
                     "offsetX": 0,
                     "offsetY": 1
                 }
@@ -266,11 +266,11 @@
         {
             "durationMs": 500,
             "sprite": {
-                "texture": "tranquility-plus-39-palette.png",
+                "texture": "wolf.png",
                 "x": 0,
                 "y": 0,
-                "w": 8,
-                "h": 8,
+                "w": 58,
+                "h": 48,
                 "offsetX": 0,
                 "offsetY": 1
             }
@@ -280,11 +280,11 @@
         {
             "durationMs": 500,
             "sprite": {
-                "texture": "tranquility-plus-39-palette.png",
+                "texture": "wolf.png",
                 "x": 0,
                 "y": 0,
-                "w": 8,
-                "h": 8,
+                "w": 58,
+                "h": 48,
                 "offsetX": 0,
                 "offsetY": 1
             }
@@ -294,11 +294,11 @@
         {
             "durationMs": 500,
             "sprite": {
-                "texture": "tranquility-plus-39-palette.png",
+                "texture": "wolf.png",
                 "x": 0,
                 "y": 0,
-                "w": 8,
-                "h": 8,
+                "w": 58,
+                "h": 48,
                 "offsetX": 0,
                 "offsetY": 1
             }
