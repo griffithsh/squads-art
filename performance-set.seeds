@@ -6,8 +6,8 @@
             "XY"
         ],
         "moveSpeed": 500,
-        "attackApexMs": 490,
-        "spellApexMs": 560,
+        "attackApexMs": 415,
+        "spellApexMs": 480,
         "from": "aseprite/performance-sets/Necromancer.json",
         "offsetX": 0,
         "offsetY": -16
