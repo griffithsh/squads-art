@@ -5,4 +5,6 @@ tar -czf squads.data \
     *.overworld-recipe \
     *.png \
     *.performance-set \
-    *.skills
+    *.skills \
+    combat-terrain/*.terrain \
+    combat-terrain/*.png

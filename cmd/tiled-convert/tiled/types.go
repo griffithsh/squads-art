@@ -1,0 +1,77 @@
+package tiled
+
+type MapObject struct {
+	ID   int     `json:"id"`
+	Name string  `json:"name"`
+	Type string  `json:"type"`
+	X    float64 `json:"x"`
+	Y    float64 `json:"y"`
+	// "width": 0,
+	// "height": 0,
+	// "point": true,
+	// "rotation": 0,
+	// "visible": true,
+}
+
+type MapLayer struct {
+	ID      int         `json:"id"`
+	Name    string      `json:"name"`
+	Type    string      `json:"type"`
+	Data    []int       `json:"data"`
+	Objects []MapObject `json:"objects"`
+	Width   int         `json:"width"`
+	Height  int         `json:"height"`
+	X       int         `json:"x"`
+	Y       int         `json:"y"`
+	//   "opacity":1,
+	//   "visible":true,
+}
+
+type Property struct {
+	Name  string      `json:"name"`
+	Type  string      `json:"type"`
+	Value interface{} `json:"value"`
+}
+
+type Map struct {
+	Infinite      bool         `json:"infinite"`
+	Width         int          `json:"width"`
+	Height        int          `json:"height"`
+	HexSideLength int          `json:"hexsidelength"`
+	Layers        []MapLayer   `json:"layers"`
+	Orientation   string       `json:"orientation"`
+	RenderOrder   string       `json:"renderorder"`
+	StaggerAxis   string       `json:"staggeraxis"`
+	StaggerIndex  string       `json:"staggerindex"`
+	TileWidth     int          `json:"tileheight"`
+	TileHeight    int          `json:"tilewidth"`
+	Tilesets      []MapTileset `json:"tilesets"`
+	Properties    []Property   `json:"properties"`
+	//  "nextlayerid":2,
+	//  "nextobjectid":1,
+	// "compressionlevel":-1,
+	//  "type":"map",
+	//  "version":1.2,
+	//  "tiledversion":"1.3.3",
+}
+
+type MapTileset struct {
+	FirstGID int    `json:"firstgid"`
+	Source   string `json:"source"`
+}
+
+type Tileset struct {
+	Columns int    `json:"columns"`
+	Image   string `json:"image"`
+	// "imageheight": 128,
+	// "imagewidth": 128,
+	// "margin": 0,
+	Name string `json:"name"`
+	// "spacing": 0,
+	// "tilecount": 40,
+	// "tiledversion": "1.3.3",
+	TileHeight int `json:"tileheight"`
+	TileWidth  int `json:"tilewidth"`
+	// "type": "tileset",
+	// "version": 1.2
+}
