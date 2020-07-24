@@ -25,6 +25,7 @@ type MapLayer struct {
 	Y       int         `json:"y"`
 	//   "opacity":1,
 	//   "visible":true,
+	Properties []Property `json:"properties"`
 }
 
 type Property struct {
@@ -43,8 +44,8 @@ type Map struct {
 	RenderOrder   string       `json:"renderorder"`
 	StaggerAxis   string       `json:"staggeraxis"`
 	StaggerIndex  string       `json:"staggerindex"`
-	TileWidth     int          `json:"tileheight"`
-	TileHeight    int          `json:"tilewidth"`
+	TileWidth     int          `json:"tilewidth"`
+	TileHeight    int          `json:"tileheight"`
 	Tilesets      []MapTileset `json:"tilesets"`
 	Properties    []Property   `json:"properties"`
 	//  "nextlayerid":2,
@@ -58,6 +59,16 @@ type Map struct {
 type MapTileset struct {
 	FirstGID int    `json:"firstgid"`
 	Source   string `json:"source"`
+}
+
+type TilesetTile struct {
+	ID   int    `json:"id"`
+	Type string `json:"type"`
+}
+
+type TilesetOffset struct {
+	X int `json:"x"`
+	Y int `json:"y"`
 }
 
 type Tileset struct {
@@ -74,4 +85,6 @@ type Tileset struct {
 	TileWidth  int `json:"tilewidth"`
 	// "type": "tileset",
 	// "version": 1.2
+	Tiles      []TilesetTile `json:"tiles"`
+	TileOffset TilesetOffset `json:"tileoffset"`
 }
