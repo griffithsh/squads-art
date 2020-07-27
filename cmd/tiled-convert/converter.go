@@ -20,6 +20,7 @@ type flattenedTile struct {
 	texture    string
 	w, h, x, y int
 	xOff, yOff int
+	obstacle   bool
 }
 type converter struct {
 	maps     map[string]tiled.Map
@@ -79,6 +80,24 @@ func (c *converter) scan(dir string) error {
 	return nil
 }
 
+// getTileObstacle returns true when the tile is an obstacle.
+func getTileObstacle(t tiled.TilesetTile) (bool, error) {
+	for _, prop := range t.Properties {
+		if strings.ToLower(prop.Name) == "obstacle" {
+			// What enum value can we get from this string?
+			str, ok := prop.Value.(string)
+			if !ok {
+				return false, fmt.Errorf("non-string value for obstacle property of tile %d", t.ID)
+			}
+			if str == "DeepWater" {
+				// then set obstacle to true
+				return true, nil
+			}
+		}
+	}
+	return false, nil
+}
+
 func getZIndex(props []tiled.Property) int {
 	for _, prop := range props {
 		if strings.ToUpper(prop.Name) == "Z" {
@@ -135,6 +154,10 @@ func (c *converter) convert() error {
 		for _, mts := range m.Tilesets {
 			tsx := c.tilesets[strings.TrimSuffix(mts.Source, ".tsx")]
 			for _, t := range tsx.Tiles {
+				obstacle, err := getTileObstacle(t)
+				if err != nil {
+					panic(tsx.Name + ": " + err.Error())
+				}
 				flatTiles[t.ID+mts.FirstGID] = flattenedTile{
 					w:    tsx.TileWidth,
 					h:    tsx.TileHeight,
@@ -143,7 +166,8 @@ func (c *converter) convert() error {
 					xOff: tsx.TileOffset.X,
 					yOff: tsx.TileOffset.Y,
 					// FIXME: This is brittle!
-					texture: path.Join("combat-terrain", tsx.Image),
+					texture:  path.Join("combat-terrain", tsx.Image),
+					obstacle: obstacle,
 				}
 			}
 		}
@@ -158,7 +182,7 @@ func (c *converter) convert() error {
 				flat := flatTiles[datum]
 				hexes = append(hexes, game.CombatMapRecipeHex{
 					Position: k,
-					Obstacle: false, // FIXME
+					Obstacle: flat.obstacle,
 					Visuals: []game.CombatMapRecipeVisual{
 
 						game.CombatMapRecipeVisual{

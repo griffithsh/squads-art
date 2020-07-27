@@ -62,8 +62,8 @@ type MapTileset struct {
 }
 
 type TilesetTile struct {
-	ID   int    `json:"id"`
-	Type string `json:"type"`
+	ID         int        `json:"id"`
+	Properties []Property `json:"properties"`
 }
 
 type TilesetOffset struct {
