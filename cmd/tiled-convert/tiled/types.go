@@ -79,7 +79,7 @@ type Tileset struct {
 	// "margin": 0,
 	Name string `json:"name"`
 	// "spacing": 0,
-	// "tilecount": 40,
+	TileCount int `json:"tilecount"`
 	// "tiledversion": "1.3.3",
 	TileHeight int `json:"tileheight"`
 	TileWidth  int `json:"tilewidth"`

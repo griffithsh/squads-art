@@ -20,7 +20,7 @@ type flattenedTile struct {
 	texture    string
 	w, h, x, y int
 	xOff, yOff int
-	obstacle   bool
+	obstacle   game.ObstacleType
 }
 type converter struct {
 	maps     map[string]tiled.Map
@@ -81,21 +81,28 @@ func (c *converter) scan(dir string) error {
 }
 
 // getTileObstacle returns true when the tile is an obstacle.
-func getTileObstacle(t tiled.TilesetTile) (bool, error) {
-	for _, prop := range t.Properties {
-		if strings.ToLower(prop.Name) == "obstacle" {
-			// What enum value can we get from this string?
-			str, ok := prop.Value.(string)
-			if !ok {
-				return false, fmt.Errorf("non-string value for obstacle property of tile %d", t.ID)
+func getTileObstacle(tileID int, tiles []tiled.TilesetTile) (game.ObstacleType, error) {
+	for _, t := range tiles {
+		if t.ID == tileID {
+			for _, prop := range t.Properties {
+				if strings.ToLower(prop.Name) == "obstacle" {
+					// What enum value can we get from this string?
+					str, ok := prop.Value.(string)
+					if !ok {
+						return game.NonObstacle, fmt.Errorf("non-string value for obstacle property of tile %d", t.ID)
+					}
+					parsed, err := game.ParseObstacleType(str)
+					if err != nil {
+						return game.NonObstacle, fmt.Errorf("parse %s: %v", str, err)
+					}
+
+					return parsed, nil
+				}
 			}
-			if str == "DeepWater" {
-				// then set obstacle to true
-				return true, nil
-			}
+			break
 		}
 	}
-	return false, nil
+	return game.NonObstacle, nil
 }
 
 func getZIndex(props []tiled.Property) int {
@@ -123,9 +130,6 @@ func getZIndex(props []tiled.Property) int {
 func (c *converter) convert() error {
 	f := geom.NewField(34, 19, 40)
 	for filename, m := range c.maps {
-		// make a new entry in converted
-		// TODO!
-
 		if m.Orientation != "hexagonal" {
 			return fmt.Errorf("non-hexagonal orientation %s: %s", m.Orientation, filename)
 		}
@@ -147,26 +151,25 @@ func (c *converter) convert() error {
 		if m.RenderOrder != "right-up" {
 			return fmt.Errorf("incorrect renderorder %s: %s", m.RenderOrder, filename)
 		}
-		// if tile render order is not Right Up...
-		// return an err
 
 		flatTiles := map[int]flattenedTile{}
 		for _, mts := range m.Tilesets {
 			tsx := c.tilesets[strings.TrimSuffix(mts.Source, ".tsx")]
-			for _, t := range tsx.Tiles {
-				obstacle, err := getTileObstacle(t)
+			for i := 0; i < tsx.TileCount; i++ {
+				obstacle, err := getTileObstacle(i, tsx.Tiles)
 				if err != nil {
 					panic(tsx.Name + ": " + err.Error())
 				}
-				flatTiles[t.ID+mts.FirstGID] = flattenedTile{
+				flatTiles[i+mts.FirstGID] = flattenedTile{
 					w:    tsx.TileWidth,
 					h:    tsx.TileHeight,
-					x:    (t.ID % tsx.Columns) * tsx.TileWidth,
-					y:    (t.ID / tsx.Columns) * tsx.TileHeight,
+					x:    (i % tsx.Columns) * tsx.TileWidth,
+					y:    (i / tsx.Columns) * tsx.TileHeight,
 					xOff: tsx.TileOffset.X,
 					yOff: tsx.TileOffset.Y,
 					// FIXME: This is brittle!
-					texture:  path.Join("combat-terrain", tsx.Image),
+					texture: path.Join("combat-terrain", tsx.Image),
+
 					obstacle: obstacle,
 				}
 			}
@@ -179,12 +182,14 @@ func (c *converter) convert() error {
 					M: i % m.Width,
 					N: i / m.Height,
 				}
-				flat := flatTiles[datum]
+				flat, ok := flatTiles[datum]
+				if !ok {
+					panic(fmt.Sprintf("no flattened tile for %d", datum))
+				}
 				hexes = append(hexes, game.CombatMapRecipeHex{
 					Position: k,
 					Obstacle: flat.obstacle,
 					Visuals: []game.CombatMapRecipeVisual{
-
 						game.CombatMapRecipeVisual{
 							Layer:   getZIndex(layer.Properties),
 							XOffset: flat.xOff,
