@@ -1,3 +1,4 @@
 *.png
 squads.data
 combat-terrain/*.terrain
+character-appearance/*.appearance

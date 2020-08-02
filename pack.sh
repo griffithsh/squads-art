@@ -7,4 +7,6 @@ tar -czf squads.data \
     *.performance-set \
     *.skills \
     combat-terrain/*.terrain \
-    combat-terrain/*.png
+    combat-terrain/*.png \
+    character-appearance/*.appearance \
+    character-appearance/*.variations.png

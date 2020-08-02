@@ -11,6 +11,10 @@ cat ./performance-set.seeds | go run ./cmd/aseprite-deseed
 go run ./cmd/tiled-convert -in ./combat-terrain -out ./combat-terrain
 rm ./combat-terrain/*.export
 
+rm -f ./character-appearance/*.appearance
+rm -f ./character-appearance/*.variations.png
+go run ./cmd/char-var
+
 # inline png into res/images.go
 ./inline.sh
 

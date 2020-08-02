@@ -1,0 +1,38 @@
+{
+    "hairColors": [
+        {
+            "name": "black",
+            "colors": [
+                "0xFF00FF",
+                "0x00FFFF",
+                "0xFFFF00"
+            ]
+        },
+        {
+            "name": "blonde",
+            "colors": [
+                "0xFF00FF",
+                "0x00FFFF",
+                "0xFFFF00"
+            ]
+        }
+    ],
+    "skinColors": [
+        {
+            "name": "pale",
+            "colors": [
+                "0xFF00FF",
+                "0x00FFFF",
+                "0xFFFF00"
+            ]
+        },
+        {
+            "name": "tanned",
+            "colors": [
+                "0xFF00FF",
+                "0x00FFFF",
+                "0xFFFF00"
+            ]
+        }
+    ]
+}

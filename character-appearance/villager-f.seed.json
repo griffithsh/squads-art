@@ -1,0 +1,11 @@
+{
+    "profession": "Villager",
+    "sexes": [
+        "XX"
+    ],
+    "input": "villager-f.png",
+    "closeup": {
+        "x": 34,
+        "y": 68
+    }
+}

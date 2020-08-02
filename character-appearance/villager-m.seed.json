@@ -1,0 +1,33 @@
+{
+    "profession": "Villager",
+    "sexes": [
+        "XY"
+    ],
+    "input": "villager-m.png",
+    "output": "// is therefore villager-m.variations.png and villager-m.appearance",
+    "closeup": {
+        "comment": "center on these coords for portraits",
+        "x": 34,
+        "y": 68
+    },
+    "comment-shouldOutput": {
+        "Profession": "villager",
+        "Sex": "XY",
+        "haircolor": "brown",
+        "skincolor": "brown",
+        "Participant": {
+            "texture": "character-appearance/villager-m.variations.png",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+        },
+        "Portrait": {
+            "texture": "character-appearance/villager-m.variations.png",
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+        }
+    }
+}
