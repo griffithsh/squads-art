@@ -4,6 +4,9 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"image"
+	"image/draw"
+	"image/png"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -33,6 +36,7 @@ type seed struct {
 	Sexes      []string
 	Input      string
 	Closeup    seedCloseup
+	Feet       seedCloseup
 }
 
 func main() {
@@ -74,6 +78,11 @@ func main() {
 				fmt.Printf("read file %s: %v", "character-appearance/"+s.Input, err)
 				os.Exit(1)
 			}
+			input, _, err := image.Decode(bytes.NewReader(inBytes))
+			bounds := input.Bounds()
+			w := (bounds.Max.X - bounds.Min.X)
+			h := (bounds.Max.Y - bounds.Min.Y)
+			canvas := image.NewNRGBA(image.Rectangle{image.Point{0, 0}, image.Point{w * len(cfg.SkinColors), h * len(cfg.HairColors)}})
 
 			// for every sex, haircolor and skincolor ...
 			for _, sex := range s.Sexes {
@@ -95,18 +104,17 @@ func main() {
 						v.SkinColor = skin.Name
 						v.Appearance.Participant = game.Sprite{
 							Texture: imageFile,
-							X:       0,
-							Y:       0,
-							W:       72,
-							H:       96,
+							X:       fx * w,
+							Y:       fy * h,
+							W:       w,
+							H:       h,
 						}
-						v.Appearance.Portrait = game.Sprite{
-							Texture: imageFile,
-							X:       s.Closeup.X - 13,
-							Y:       s.Closeup.Y - 13,
-							W:       26,
-							H:       26,
-						}
+						v.Appearance.FaceX = s.Closeup.X
+						v.Appearance.FaceY = s.Closeup.Y
+
+						v.Appearance.FeetX = s.Feet.X
+						v.Appearance.FeetY = s.Feet.Y
+
 						buf := bytes.Buffer{}
 						if err := json.NewEncoder(&buf).Encode(&v); err != nil {
 							fmt.Printf("encode appearance %s: %v", appearanceFile, err)
@@ -114,16 +122,28 @@ func main() {
 						}
 						ioutil.WriteFile("character-appearance/"+appearanceFile, buf.Bytes(), 0644)
 
-						// TODO: replace pixels in a copy of the input image and
-						// composite it into a patchwork.
-						fmt.Printf("(%s-%s) this variation needs to go at %d,%d\n", hair.Name, skin.Name, fx, fy)
+						input, _, err := image.Decode(bytes.NewReader(inBytes))
+						if err != nil {
+							panic(fmt.Sprintf("decode input image again: %v", err))
+						}
+
+						// TODO: replace pixels in a copy of the input image.
+						// ...
+
+						// Composite the copy into the canvas of variations.
+						destRect := image.Rect(fx*w, fy*h, fx*w+w, fy*h+h)
+						draw.Draw(canvas, destRect, input, image.Point{0, 0}, draw.Over)
 					}
 				}
 			}
 			// write out the file here ...
-			if err := ioutil.WriteFile(imageFile, inBytes, 0644); err != nil {
-				fmt.Printf("write file %s: %v", imageFile, err)
-				os.Exit(1)
+			f, err := os.Create(imageFile)
+			if err != nil {
+				panic(fmt.Sprintf("create canvas file %s: %v", imageFile, err))
+			}
+			err = png.Encode(f, canvas)
+			if err != nil {
+				panic(fmt.Sprintf("encode png: %v", err))
 			}
 		}
 	}
