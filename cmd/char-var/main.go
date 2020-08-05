@@ -19,24 +19,15 @@ import (
 char-var generates variations of character appearances
 */
 
-type recolor struct {
-	Name   string
-	Colors []string
-}
-type config struct {
-	HairColors []recolor
-	SkinColors []recolor
-}
-
-type seedCloseup struct {
+type point struct {
 	X, Y int
 }
 type seed struct {
 	Profession string
 	Sexes      []string
 	Input      string
-	Closeup    seedCloseup
-	Feet       seedCloseup
+	Closeup    point
+	Feet       point
 }
 
 func main() {
@@ -122,13 +113,27 @@ func main() {
 						}
 						ioutil.WriteFile("character-appearance/"+appearanceFile, buf.Bytes(), 0644)
 
-						input, _, err := image.Decode(bytes.NewReader(inBytes))
+						raw, _, err := image.Decode(bytes.NewReader(inBytes))
+						input := image.NewNRGBA(image.Rectangle{image.Point{0, 0}, image.Point{w, h}})
+						draw.Draw(input, image.Rect(0, 0, w, h), raw, image.Point{0, 0}, draw.Over)
+
 						if err != nil {
 							panic(fmt.Sprintf("decode input image again: %v", err))
 						}
 
-						// TODO: replace pixels in a copy of the input image.
-						// ...
+						rm := remapper{}
+						rm.load(cfg.HairTemplate, hair.Colors)
+						rm.load(cfg.SkinTemplate, skin.Colors)
+						for i := 0; i < w*h; i++ {
+							curr := input.At(i%w, i/h)
+							_, _, _, a := curr.RGBA()
+							if a == 0 {
+								continue
+							}
+							if should, to := rm.remap(curr); should {
+								input.Set(i%w, i/h, to)
+							}
+						}
 
 						// Composite the copy into the canvas of variations.
 						destRect := image.Rect(fx*w, fy*h, fx*w+w, fy*h+h)

@@ -1,38 +1,90 @@
 {
+    "hairTemplate": {
+        "xlt": "444444",
+        "lt": "333333",
+        "md": "222222",
+        "dk": "111111",
+        "xdk": "000000"
+    },
+    "skinTemplate": {
+        "xlt": "ff77ff",
+        "lt": "ff44ff",
+        "md": "ff00ff",
+        "dk": "cc00cc",
+        "xdk": "990099"
+    },
     "hairColors": [
         {
-            "name": "black",
-            "colors": [
-                "0xFF00FF",
-                "0x00FFFF",
-                "0xFFFF00"
-            ]
+            "name": "blonde",
+            "colors": {
+                "xlt": "ffeb57",
+                "lt": "ffc825",
+                "md": "ffa214",
+                "dk": "ed7614",
+                "xdk": "bf6f4a"
+            }
         },
         {
-            "name": "blonde",
-            "colors": [
-                "0xFF00FF",
-                "0x00FFFF",
-                "0xFFFF00"
-            ]
+            "name": "red",
+            "colors": {
+                "xlt": "e69c69",
+                "lt": "ff5000",
+                "md": "c42430",
+                "dk": "891e2b",
+                "xdk": "571c27"
+            }
+        },
+        {
+            "name": "black",
+            "colors": {
+                "xlt": "657392",
+                "lt": "424c6e",
+                "md": "2a2f4e",
+                "dk": "1a1932",
+                "xdk": "0e071b"
+            }
         }
     ],
     "skinColors": [
         {
             "name": "pale",
-            "colors": [
-                "0xFF00FF",
-                "0x00FFFF",
-                "0xFFFF00"
-            ]
+            "colors": {
+                "xlt": "94fdff",
+                "lt": "ffffff",
+                "md": "fdd2ed",
+                "dk": "fdd2ed",
+                "xdk": "f389f5"
+            }
         },
         {
             "name": "tanned",
-            "colors": [
-                "0xFF00FF",
-                "0x00FFFF",
-                "0xFFFF00"
-            ]
+            "colors": {
+                "xlt": "f9e6cf",
+                "lt": "f6ca9f",
+                "md": "e69c69",
+                "dk": "bf6f4a",
+                "xdk": "8a4836"
+            }
+        },
+        {
+            "name": "green",
+            "colors": {
+                "xlt": "c7cfdd",
+                "lt": "b4b4b4",
+                "md": "92a1b9",
+                "dk": "657392",
+                "xdk": "1e6f50"
+            }
+        },
+        {
+            "name": "brown",
+            "colors": {
+                "xlt": "c64524",
+                "lt": "8a4836",
+                "md": "5d2c28",
+                "dk": "391f21",
+                "xdk": "1c121c"
+            }
         }
     ]
 }
