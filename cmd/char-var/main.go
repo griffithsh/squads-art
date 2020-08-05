@@ -33,19 +33,19 @@ type seed struct {
 func main() {
 	b, err := ioutil.ReadFile("./character-appearance/config.json")
 	if err != nil {
-		fmt.Printf("read config: %v", err)
+		fmt.Printf("read config: %v\n", err)
 		os.Exit(1)
 	}
 	var cfg config
 	if err := json.NewDecoder(bytes.NewReader(b)).Decode(&cfg); err != nil {
-		fmt.Printf("decode config: %v", err)
+		fmt.Printf("decode config: %v\n", err)
 		os.Exit(1)
 	}
 
 	// read every file in ./character-appearance looking for .seed.json files
 	files, err := ioutil.ReadDir("./character-appearance")
 	if err != nil {
-		fmt.Printf("read directory: %v", err)
+		fmt.Printf("read directory: %v\n", err)
 		os.Exit(1)
 	}
 
@@ -54,19 +54,19 @@ func main() {
 			// got a seed to use!
 			b, err := ioutil.ReadFile("./character-appearance/" + file.Name())
 			if err != nil {
-				fmt.Printf("read seed %s: %v", file.Name(), err)
+				fmt.Printf("read seed %s: %v\n", file.Name(), err)
 				os.Exit(1)
 			}
 			var s seed
 			if err := json.NewDecoder(bytes.NewReader(b)).Decode(&s); err != nil {
-				fmt.Printf("decode seed %s: %v", file.Name(), err)
+				fmt.Printf("decode seed %s: %v\n", file.Name(), err)
 				os.Exit(1)
 			}
 
 			imageFile := fmt.Sprintf("character-appearance/%s.variations%s", strings.TrimSuffix(s.Input, filepath.Ext(s.Input)), filepath.Ext(s.Input))
 			inBytes, err := ioutil.ReadFile("character-appearance/" + s.Input)
 			if err != nil {
-				fmt.Printf("read file %s: %v", "character-appearance/"+s.Input, err)
+				fmt.Printf("read file %s: %v\n", "character-appearance/"+s.Input, err)
 				os.Exit(1)
 			}
 			input, _, err := image.Decode(bytes.NewReader(inBytes))
