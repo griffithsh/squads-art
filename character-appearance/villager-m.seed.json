@@ -7,8 +7,8 @@
     "output": "// is therefore villager-m.variations.png and villager-m.appearance",
     "closeup": {
         "comment": "center on these coords for portraits",
-        "x": 34,
-        "y": 68
+        "x": 12,
+        "y": 21
     },
     "feet": {
         "x": 12,
