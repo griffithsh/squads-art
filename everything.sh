@@ -10,7 +10,7 @@ rm -f ./character-appearance/*.variations.png
 go run ./cmd/char-var
 
 # inline png into res/images.go
-./inline.sh
+go run ./cmd/png-inline -o ../squads/res/images.go -p res
 
 # pack game data into squads.data
 ./pack.sh
