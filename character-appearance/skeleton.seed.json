@@ -4,13 +4,13 @@
         "XX",
         "XY"
     ],
-    "input": "villager-f.png",
+    "input": "skeleton.png",
     "closeup": {
-        "x": 34,
-        "y": 68
+        "x": 51,
+        "y": 34
     },
     "feet": {
-        "x": 36,
-        "y": 72
+        "x": 52,
+        "y": 110
     }
 }
