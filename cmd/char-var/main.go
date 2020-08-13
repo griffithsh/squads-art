@@ -124,14 +124,17 @@ func main() {
 						rm := remapper{}
 						rm.load(cfg.HairTemplate, hair.Colors)
 						rm.load(cfg.SkinTemplate, skin.Colors)
+
+						// For every pixel of the image ...
 						for i := 0; i < w*h; i++ {
-							curr := input.At(i%w, i/h)
+							x, y := i%w, i/w
+							curr := input.At(x, y)
 							_, _, _, a := curr.RGBA()
 							if a == 0 {
 								continue
 							}
 							if should, to := rm.remap(curr); should {
-								input.Set(i%w, i/h, to)
+								input.Set(x, y, to)
 							}
 						}
 
