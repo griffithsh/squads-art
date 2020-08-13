@@ -3,35 +3,13 @@
     "sexes": [
         "XY"
     ],
-    "input": "villager-m.png",
-    "output": "// is therefore villager-m.variations.png and villager-m.appearance",
+    "input": "farmer-m-villager.png",
     "closeup": {
-        "comment": "center on these coords for portraits",
-        "x": 12,
-        "y": 21
+        "x": 47,
+        "y": 30
     },
     "feet": {
-        "x": 12,
-        "y": 40
-    },
-    "comment-shouldOutput": {
-        "Profession": "villager",
-        "Sex": "XY",
-        "haircolor": "brown",
-        "skincolor": "brown",
-        "Participant": {
-            "texture": "character-appearance/villager-m.variations.png",
-            "x": 0,
-            "y": 0,
-            "w": 0,
-            "h": 0
-        },
-        "Portrait": {
-            "texture": "character-appearance/villager-m.variations.png",
-            "x": 0,
-            "y": 0,
-            "w": 0,
-            "h": 0
-        }
+        "x": 48,
+        "y": 114
     }
 }
