@@ -5,11 +5,11 @@
     ],
     "input": "dejected-f-villager.png",
     "closeup": {
-        "x": 98,
-        "y": 89
+        "x": 25,
+        "y": 34
     },
     "feet": {
-        "x": 98,
-        "y": 168
+        "x": 25,
+        "y": 115
     }
 }
