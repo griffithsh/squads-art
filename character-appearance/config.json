@@ -17,31 +17,71 @@
         {
             "name": "blonde",
             "colors": {
-                "xlt": "ffeb57",
-                "lt": "ffc825",
-                "md": "ffa214",
-                "dk": "ed7614",
-                "xdk": "bf6f4a"
+                "xlt": "e3e7ab",
+                "lt": "e3e7ab",
+                "md": "cfc281",
+                "dk": "cca562",
+                "xdk": "836b3f"
             }
         },
         {
             "name": "red",
             "colors": {
-                "xlt": "e69c69",
-                "lt": "ff5000",
-                "md": "c42430",
-                "dk": "891e2b",
-                "xdk": "571c27"
+                "xlt": "cca562",
+                "lt": "c96d45",
+                "md": "a52d27",
+                "dk": "781826",
+                "xdk": "521e2e"
             }
         },
         {
             "name": "black",
             "colors": {
-                "xlt": "657392",
-                "lt": "424c6e",
-                "md": "2a2f4e",
-                "dk": "1a1932",
-                "xdk": "0e071b"
+                "xlt": "63492c",
+                "lt": "63492c",
+                "md": "28221f",
+                "dk": "28221f",
+                "xdk": "28221f"
+            }
+        },
+        {
+            "name": "black2",
+            "colors": {
+                "xlt": "8d5b57",
+                "lt": "573222",
+                "md": "28221f",
+                "dk": "28221f",
+                "xdk": "33144d"
+            }
+        },
+        {
+            "name": "brown",
+            "colors": {
+                "xlt": "8d5b57",
+                "lt": "573222",
+                "md": "573222",
+                "dk": "58264f",
+                "xdk": "33144d"
+            }
+        },
+        {
+            "name": "brown2",
+            "colors": {
+                "xlt": "c7977d",
+                "lt": "8d5b57",
+                "md": "573222",
+                "dk": "521e2e",
+                "xdk": "521e2e"
+            }
+        },
+        {
+            "name": "grey",
+            "colors": {
+                "xlt": "acc2c3",
+                "lt": "869598",
+                "md": "5f6367",
+                "dk": "3a3b3d",
+                "xdk": "372a5e"
             }
         }
     ],
@@ -49,41 +89,91 @@
         {
             "name": "pale",
             "colors": {
-                "xlt": "94fdff",
-                "lt": "ffffff",
-                "md": "fdd2ed",
-                "dk": "fdd2ed",
-                "xdk": "f389f5"
+                "xlt": "eadce6",
+                "lt": "dfb9ca",
+                "md": "b18b9a",
+                "dk": "855b69",
+                "xdk": "72404a"
             }
         },
         {
             "name": "tanned",
             "colors": {
-                "xlt": "f9e6cf",
-                "lt": "f6ca9f",
-                "md": "e69c69",
-                "dk": "bf6f4a",
-                "xdk": "8a4836"
+                "xlt": "f7e1bc",
+                "lt": "d9b691",
+                "md": "c7977d",
+                "dk": "8d5b57",
+                "xdk": "573222"
             }
         },
         {
-            "name": "green",
+            "name": "ruddy",
             "colors": {
-                "xlt": "c7cfdd",
-                "lt": "b4b4b4",
-                "md": "92a1b9",
-                "dk": "657392",
-                "xdk": "1e6f50"
+                "xlt": "cca562",
+                "lt": "c96d45",
+                "md": "a52d27",
+                "dk": "781826",
+                "xdk": "521e2e"
+            }
+        },
+        {
+            "name": "yellow",
+            "colors": {
+                "xlt": "e3e7ab",
+                "lt": "cfc281",
+                "md": "cca562",
+                "dk": "836b3f",
+                "xdk": "63492c"
+            }
+        },
+        {
+            "name": "yellow2",
+            "colors": {
+                "xlt": "e3e7ab",
+                "lt": "f7e1bc",
+                "md": "d9b691",
+                "dk": "c7977d",
+                "xdk": "8d5b57"
             }
         },
         {
             "name": "brown",
             "colors": {
-                "xlt": "c64524",
-                "lt": "8a4836",
-                "md": "5d2c28",
-                "dk": "391f21",
-                "xdk": "1c121c"
+                "xlt": "c7977d",
+                "lt": "8d5b57",
+                "md": "573222",
+                "dk": "413325",
+                "xdk": "28221f"
+            }
+        },
+        {
+            "name": "brown2",
+            "colors": {
+                "xlt": "b18b9a",
+                "lt": "8d5b57",
+                "md": "72404a",
+                "dk": "573222",
+                "xdk": "28221f"
+            }
+        },
+        {
+            "name": "purple",
+            "colors": {
+                "xlt": "dfb9ca",
+                "lt": "b18b9a",
+                "md": "855b69",
+                "dk": "72404a",
+                "xdk": "58264f"
+            }
+        },
+        {
+            "name": "purple2",
+            "colors": {
+                "xlt": "b18b9a",
+                "lt": "855b69",
+                "md": "72404a",
+                "dk": "58264f",
+                "xdk": "33144d"
             }
         }
     ]
