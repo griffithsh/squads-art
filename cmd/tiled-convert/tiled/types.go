@@ -56,6 +56,16 @@ type Map struct {
 	//  "tiledversion":"1.3.3",
 }
 
+// ObscuresProperty is a type that the "Obscures" custom property can be
+// unmarshaled into.
+type ObscuresProperty []ObscuresPropertyCoordinate
+
+// ObscuresPropertyCoordinate is a hexagonal offset from the origin of the
+// placed tile that defines an other hexagon that is obscured yb this tile.
+type ObscuresPropertyCoordinate struct {
+	M, N int
+}
+
 type MapTileset struct {
 	FirstGID int    `json:"firstgid"`
 	Source   string `json:"source"`

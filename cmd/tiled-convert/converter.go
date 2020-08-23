@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bufio"
+	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 	"path"
@@ -21,6 +24,7 @@ type flattenedTile struct {
 	w, h, x, y int
 	xOff, yOff int
 	obstacle   game.ObstacleType
+	obscures   tiled.ObscuresProperty
 }
 type converter struct {
 	maps     map[string]tiled.Map
@@ -105,6 +109,50 @@ func getTileObstacle(tileID int, tiles []tiled.TilesetTile) (game.ObstacleType, 
 	return game.NonObstacle, nil
 }
 
+func getObscuredOtherTiles(tileID int, tiles []tiled.TilesetTile) (tiled.ObscuresProperty, error) {
+	for _, t := range tiles {
+		if t.ID == tileID {
+			for _, prop := range t.Properties {
+				if strings.ToLower(prop.Name) == "obscures" {
+					str, ok := prop.Value.(string)
+					if !ok {
+						fmt.Fprintf(os.Stderr, "tiledID %d: non string obscures property", tileID)
+						return tiled.ObscuresProperty{}, nil
+					}
+
+					var result tiled.ObscuresProperty
+					r := bufio.NewReader(bytes.NewReader([]byte(str)))
+					for {
+						line, err := r.ReadString('\n')
+						if err == io.EOF {
+							break
+						} else if err != nil {
+							return nil, fmt.Errorf("ReadString: %v", err)
+						}
+						vals := strings.Split(string(line), ",")
+						if len(vals) < 2 {
+							return nil, fmt.Errorf("split string: %v", err)
+						}
+
+						m, err := strconv.Atoi(strings.TrimSpace(vals[0]))
+						if err != nil {
+							return nil, fmt.Errorf("Atoi: %v", err)
+						}
+						n, err := strconv.Atoi(strings.TrimSpace(vals[1]))
+						if err != nil {
+							return nil, fmt.Errorf("Atoi: %v", err)
+						}
+						result = append(result, tiled.ObscuresPropertyCoordinate{M: m, N: n})
+					}
+					return result, nil
+				}
+			}
+			break
+		}
+	}
+	return tiled.ObscuresProperty{}, nil
+}
+
 func getZIndex(props []tiled.Property) int {
 	for _, prop := range props {
 		if strings.ToUpper(prop.Name) == "Z" {
@@ -158,7 +206,11 @@ func (c *converter) convert() error {
 			for i := 0; i < tsx.TileCount; i++ {
 				obstacle, err := getTileObstacle(i, tsx.Tiles)
 				if err != nil {
-					panic(tsx.Name + ": " + err.Error())
+					panic(tsx.Name + ": obstacle: " + err.Error())
+				}
+				obscures, err := getObscuredOtherTiles(i, tsx.Tiles)
+				if err != nil {
+					panic(tsx.Name + ": obscured property: " + err.Error())
 				}
 				flatTiles[i+mts.FirstGID] = flattenedTile{
 					w:    tsx.TileWidth,
@@ -171,6 +223,7 @@ func (c *converter) convert() error {
 					texture: path.Join("combat-terrain", tsx.Image),
 
 					obstacle: obstacle,
+					obscures: obscures,
 				}
 			}
 		}
@@ -178,22 +231,26 @@ func (c *converter) convert() error {
 		starts := []geom.Key{}
 		for _, layer := range m.Layers {
 			for i, datum := range layer.Data {
+				if datum == 0 {
+					continue
+				}
 				k := geom.Key{
 					M: i % m.Width,
 					N: i / m.Height,
 				}
 				flat, ok := flatTiles[datum]
 				if !ok {
-					panic(fmt.Sprintf("no flattened tile for %d", datum))
+					panic(fmt.Sprintf("no flattened tile for %d: %v", datum, flatTiles))
 				}
 				hexes = append(hexes, game.CombatMapRecipeHex{
 					Position: k,
 					Obstacle: flat.obstacle,
 					Visuals: []game.CombatMapRecipeVisual{
 						game.CombatMapRecipeVisual{
-							Layer:   getZIndex(layer.Properties),
-							XOffset: flat.xOff,
-							YOffset: flat.yOff,
+							Layer:    getZIndex(layer.Properties),
+							XOffset:  flat.xOff,
+							YOffset:  flat.yOff,
+							Obscures: realise(k, flat.obscures),
 							Frames: []game.CombatMapRecipeHexFrame{
 								game.CombatMapRecipeHexFrame{
 									Texture: flat.texture,
@@ -237,4 +294,12 @@ func (c *converter) write(dir string) error {
 		}
 	}
 	return nil
+}
+
+func realise(p geom.Key, offsets tiled.ObscuresProperty) []geom.Key {
+	result := make([]geom.Key, len(offsets))
+	for i, off := range offsets {
+		result[i] = geom.Key{M: p.M + off.M, N: p.N + off.N}
+	}
+	return result
 }
