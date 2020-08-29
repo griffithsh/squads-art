@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.3" orientation="hexagonal" renderorder="right-up" width="12" height="12" tilewidth="72" tileheight="40" infinite="0" hexsidelength="34" staggeraxis="x" staggerindex="odd" nextlayerid="5" nextobjectid="4">
+<map version="1.2" tiledversion="1.3.3" orientation="hexagonal" renderorder="right-up" width="12" height="12" tilewidth="72" tileheight="40" infinite="0" hexsidelength="34" staggeraxis="x" staggerindex="odd" nextlayerid="7" nextobjectid="4">
  <tileset firstgid="1" source="v1.tsx"/>
  <tileset firstgid="13" source="tree-v1.tsx"/>
  <layer id="1" name="Ground" width="12" height="12">
@@ -10,18 +10,56 @@
 1,1,1,1,1,1,1,1,1,1,1,1,
 1,3,1,3,1,1,1,1,1,1,1,1,
 1,3,3,3,1,1,1,3,3,3,1,1,
-1,3,3,3,1,3,1,3,3,1,1,1,
+1,3,3,3,1,3,1,3,1,3,1,1,
 1,3,3,2,3,2,3,3,1,1,1,1,
 1,1,3,3,2,2,2,2,3,1,1,1,
 1,1,1,3,2,2,2,3,3,3,1,1,
 1,1,3,2,2,3,2,3,1,3,1,1,
-1,1,3,3,3,1,3,3,3,3,1,1,
-1,1,3,1,1,1,3,3,3,3,1,1,
+1,3,3,3,3,1,3,3,3,3,1,1,
+1,3,1,3,1,1,3,3,3,3,1,1,
 1,1,1,1,1,1,3,3,3,1,1,1,
 1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
+ <layer id="5" name="Trunks" width="12" height="12">
+  <properties>
+   <property name="Z" type="int" value="1"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,15,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,15,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
  <layer id="4" name="Trees" width="12" height="12">
+  <properties>
+   <property name="Z" type="int" value="100"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,13,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,13,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="tree-outlines" width="12" height="12">
   <properties>
    <property name="Z" type="int" value="100"/>
   </properties>
