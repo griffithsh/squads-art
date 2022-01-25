@@ -1,11 +1,13 @@
 #!/bin/sh
 
+shopt -s globstar
+
 tar -czf squads.data \
     *.names \
     *.overworld-recipe \
     *.png \
     *.performance-set \
-    *.skills \
+    **/*.skills \
     combat-terrain/*.terrain \
     combat-terrain/*.png \
     character-appearance/*.appearance \

@@ -14,3 +14,5 @@ go run ./cmd/png-inline -o ../squads/res/images.go -p res
 
 # pack game data into squads.data
 ./pack.sh
+
+rm ./character-appearance/*.appearance

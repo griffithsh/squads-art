@@ -1,0 +1,43 @@
+{
+    "id": "basic-slash",
+    "name": "Slash",
+    "explanation": "Slash the target",
+    "tags": [
+        "Attack"
+    ],
+    "icon": [
+        {
+            "texture": "hud2.png",
+            "x": 0,
+            "y": 0,
+            "w": 24,
+            "h": 24
+        }
+    ],
+    "targeting": "TargetAdjacent",
+    "targetingBrush": "SingleHex",
+    "costs": {
+        "CostsActionPoints": 20
+    },
+    "effects": [
+        {
+            "when": 100,
+            "what": {
+                "_type": "DamageEffect",
+                "min": [
+                    {
+                        "operator": "AddOp",
+                        "variable": "$DMG-MIN"
+                    }
+                ],
+                "max": [
+                    {
+                        "operator": "AddOp",
+                        "variable": "$DMG-MAX"
+                    }
+                ],
+                "classification": "Attack"
+            }
+        }
+    ]
+}
