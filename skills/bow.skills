@@ -1,12 +1,12 @@
 {
-    "id": "sword-attack",
+    "id": "bow-attack",
     "name": "Attack",
-    "explanation": "Attack the target for $DMG-MIN to $DMG-MAX damage",
+    "explanation": "Attack a target within 5 range for $DMG-MIN to $DMG-MAX damage",
     "tags": [
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "bow-skills.png",
         "x": 0,
         "y": 0,
         "w": 24,
@@ -15,8 +15,8 @@
     "targeting": {
         "selectable": {
             "type": "SelectWithin",
-            "minRange": 1,
-            "maxRange": 1
+            "minRange": 2,
+            "maxRange": 5
         },
         "brush": {
             "type": "SingleHex"
@@ -25,9 +25,10 @@
     "costs": {
         "CostsActionPoints": 20
     },
+    "attackChanceToHitModifier": 0.0,
     "effects": [
         {
-            "when": 100,
+            "when": 400,
             "whenPoint": "Apex",
             "what": [
                 {
@@ -51,15 +52,15 @@
     ]
 }
 {
-    "id": "sword-slash",
-    "name": "Slash",
-    "explanation": "Slash the target",
+    "id": "bow-straight",
+    "name": "Straight Shot",
+    "explanation": "Deal damage at short range with reduced chance to miss",
     "tags": [
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
-        "x": 24,
+        "texture": "bow-skills.png",
+        "x": 48,
         "y": 0,
         "w": 24,
         "h": 24
@@ -68,76 +69,18 @@
         "selectable": {
             "type": "SelectWithin",
             "minRange": 1,
-            "maxRange": 1
+            "maxRange": 2
         },
         "brush": {
             "type": "SingleHex"
         }
     },
     "costs": {
-        "CostsActionPoints": 20
+        "CostsActionPoints": 25
     },
+    "attackChanceToHitModifier": 0.25,
     "effects": [
         {
-            "when": 100,
-            "whenPoint": "Apex",
-            "what": [
-                {
-                    "_type": "DamageEffect",
-                    "min": [
-                        {
-                            "operator": "AddOp",
-                            "variable": "$DMG-MIN"
-                        }
-                    ],
-                    "max": [
-                        {
-                            "operator": "AddOp",
-                            "variable": "$DMG-MAX"
-                        }
-                    ],
-                    "classification": "Attack"
-                },
-                {
-                    "_type": "InjuryEffect",
-                    "type": "BleedingInjury",
-                    "value": 3000,
-                    "classification": "Attack"
-                }
-            ]
-        }
-    ]
-}
-{
-    "id": "sword-stab",
-    "name": "Stab",
-    "explanation": "Stab the target",
-    "tags": [
-        "Attack"
-    ],
-    "icon": {
-        "texture": "sword-skills.png",
-        "x": 0,
-        "y": 24,
-        "w": 24,
-        "h": 24
-    },
-    "targeting": {
-        "selectable": {
-            "type": "SelectWithin",
-            "minRange": 1,
-            "maxRange": 1
-        },
-        "brush": {
-            "type": "SingleHex"
-        }
-    },
-    "costs": {
-        "CostsActionPoints": 15
-    },
-    "effects": [
-        {
-            "when": 100,
             "whenPoint": "Apex",
             "what": [
                 {
@@ -161,14 +104,14 @@
     ]
 }
 {
-    "id": "sword-hew",
-    "name": "Hew",
-    "explanation": "An overhead hewing strike with a sword",
+    "id": "bow-quick",
+    "name": "Quick Shot",
+    "explanation": "Harry your target with a low-cost, low damage attack",
     "tags": [
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "bow-skills.png",
         "x": 72,
         "y": 0,
         "w": 24,
@@ -178,18 +121,18 @@
         "selectable": {
             "type": "SelectWithin",
             "minRange": 1,
-            "maxRange": 1
+            "maxRange": 3
         },
         "brush": {
             "type": "SingleHex"
         }
     },
     "costs": {
-        "CostsActionPoints": 50
+        "CostsActionPoints": 7
     },
+    "attackChanceToHitModifier": 0,
     "effects": [
         {
-            "when": 100,
             "whenPoint": "Apex",
             "what": [
                 {
@@ -201,7 +144,127 @@
                         },
                         {
                             "operator": "MultOp",
-                            "variable": "2"
+                            "variable": "0.75"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "0.75"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "bow-focus",
+    "name": "Focus Shot",
+    "explanation": "Find a moment of zen before unleashing a focused shot at your target, dealing high damage",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "bow-skills.png",
+        "x": 96,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 5
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 50
+    },
+    "attackChanceToHitModifier": 0,
+    "effects": [
+        {
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "3"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "4"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "bow-ballistic",
+    "name": "Ballistic Shot",
+    "explanation": "High arcing shot with elevated chance to miss, and higher damage",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "bow-skills.png",
+        "x": 24,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 3,
+            "maxRange": 7
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 30
+    },
+    "attackChanceToHitModifier": -0.3,
+    "effects": [
+        {
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "3"
                         }
                     ],
                     "max": [
@@ -221,69 +284,16 @@
     ]
 }
 {
-    "id": "sword-parry",
-    "name": "Parry",
-    "explanation": "Lose all AP. Until prepared, if attacked in melee, the first attacker takes 200% weapon damage instead",
+    "id": "bow-skirmish",
+    "name": "Skirmish Shot",
+    "explanation": "Hit two targets in a row for $DMG-MIN to $DMG-MAX damage",
     "tags": [
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
-        "x": 48,
+        "texture": "bow-skills.png",
+        "x": 120,
         "y": 0,
-        "w": 24,
-        "h": 24
-    },
-    "targeting": {
-        "selectable": {
-            "type": "Untargeted"
-        },
-        "brush": {
-            "type": "SingleHex"
-        }
-    },
-    "costs": {
-        "CostsActionPoints": 25
-    }
-}
-{
-    "id": "sword-cunning-parry",
-    "name": "Cunning Parry",
-    "explanation": "Lose all AP. Until prepared, if attacked in melee, the first attacker takes 5000 bleeding damage instead",
-    "tags": [
-        "Attack"
-    ],
-    "icon": {
-        "texture": "sword-skills.png",
-        "x": 48,
-        "y": 24,
-        "w": 24,
-        "h": 24
-    },
-    "targeting": {
-        "selectable": {
-            "type": "Untargeted"
-        },
-        "brush": {
-            "type": "SingleHex"
-        }
-    },
-    "targetingBrush": "None",
-    "costs": {
-        "CostsActionPoints": 25
-    }
-}
-{
-    "id": "sword-rogue-slash",
-    "name": "Rogue Slash",
-    "explanation": "All adjacent suffer Bleeding for 2000",
-    "tags": [
-        "Attack"
-    ],
-    "icon": {
-        "texture": "sword-skills.png",
-        "x": 24,
-        "y": 24,
         "w": 24,
         "h": 24
     },
@@ -294,17 +304,18 @@
             "maxRange": 1
         },
         "brush": {
-            "type": "WithinRangeOfOrigin",
-            "minRange": 1,
-            "maxRange": 1
+            "type": "LinearFromOrigin",
+            "linearExtent": 2,
+            "linearDirection": "Forward"
         }
     },
     "costs": {
-        "CostsActionPoints": 25
+        "CostsActionPoints": 20
     },
+    "attackChanceToHitModifier": 0.3,
     "effects": [
         {
-            "when": 150,
+            "when": 400,
             "whenPoint": "Apex",
             "what": [
                 {
@@ -321,12 +332,6 @@
                             "variable": "$DMG-MAX"
                         }
                     ],
-                    "classification": "Attack"
-                },
-                {
-                    "_type": "InjuryEffect",
-                    "type": "BleedingInjury",
-                    "value": 1500,
                     "classification": "Attack"
                 }
             ]
