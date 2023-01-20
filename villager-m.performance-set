@@ -8,7 +8,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -19,7 +19,7 @@
             {
                 "durationMs": 2000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 48,
                     "y": 0,
                     "w": 24,
@@ -30,7 +30,7 @@
             {
                 "durationMs": 750,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 24,
                     "y": 0,
                     "w": 24,
@@ -41,7 +41,7 @@
             {
                 "durationMs": 300,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -54,7 +54,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -65,7 +65,7 @@
             {
                 "durationMs": 2000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 48,
                     "y": 0,
                     "w": 24,
@@ -76,7 +76,7 @@
             {
                 "durationMs": 750,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 24,
                     "y": 0,
                     "w": 24,
@@ -87,7 +87,7 @@
             {
                 "durationMs": 300,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -100,7 +100,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -111,7 +111,7 @@
             {
                 "durationMs": 2000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 48,
                     "y": 0,
                     "w": 24,
@@ -122,7 +122,7 @@
             {
                 "durationMs": 750,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 24,
                     "y": 0,
                     "w": 24,
@@ -133,7 +133,7 @@
             {
                 "durationMs": 300,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -146,7 +146,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -157,7 +157,7 @@
             {
                 "durationMs": 2000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 48,
                     "y": 0,
                     "w": 24,
@@ -168,7 +168,7 @@
             {
                 "durationMs": 750,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 24,
                     "y": 0,
                     "w": 24,
@@ -179,7 +179,7 @@
             {
                 "durationMs": 300,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -192,7 +192,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -203,7 +203,7 @@
             {
                 "durationMs": 2000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 48,
                     "y": 0,
                     "w": 24,
@@ -214,7 +214,7 @@
             {
                 "durationMs": 750,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 24,
                     "y": 0,
                     "w": 24,
@@ -225,7 +225,7 @@
             {
                 "durationMs": 300,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -238,7 +238,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -249,7 +249,7 @@
             {
                 "durationMs": 2000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 48,
                     "y": 0,
                     "w": 24,
@@ -260,7 +260,7 @@
             {
                 "durationMs": 750,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 24,
                     "y": 0,
                     "w": 24,
@@ -271,7 +271,7 @@
             {
                 "durationMs": 300,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -286,7 +286,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -299,7 +299,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -312,7 +312,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -325,7 +325,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -338,7 +338,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -351,7 +351,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -366,7 +366,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -379,7 +379,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -392,7 +392,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -405,7 +405,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -418,7 +418,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -431,7 +431,7 @@
             {
                 "durationMs": 10000,
                 "sprite": {
-                    "texture": "figure.png",
+                    "texture": "deprecated/figure.png",
                     "x": 0,
                     "y": 0,
                     "w": 24,
@@ -445,7 +445,7 @@
         {
             "durationMs": 10000,
             "sprite": {
-                "texture": "figure.png",
+                "texture": "deprecated/figure.png",
                 "x": 0,
                 "y": 0,
                 "w": 24,
@@ -458,7 +458,7 @@
         {
             "durationMs": 10000,
             "sprite": {
-                "texture": "figure.png",
+                "texture": "deprecated/figure.png",
                 "x": 0,
                 "y": 0,
                 "w": 24,
@@ -471,7 +471,7 @@
         {
             "durationMs": 10000,
             "sprite": {
-                "texture": "figure.png",
+                "texture": "deprecated/figure.png",
                 "x": 0,
                 "y": 0,
                 "w": 24,

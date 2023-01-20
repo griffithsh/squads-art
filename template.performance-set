@@ -9,7 +9,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -23,7 +23,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -37,7 +37,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -51,7 +51,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -65,7 +65,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -79,7 +79,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -95,7 +95,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -109,7 +109,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -123,7 +123,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -137,7 +137,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -151,7 +151,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -165,7 +165,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -181,7 +181,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -195,7 +195,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -209,7 +209,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -223,7 +223,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -237,7 +237,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -251,7 +251,7 @@
             {
                 "durationMs": 500,
                 "sprite": {
-                    "texture": "tranquility-plus-39-palette.png",
+                    "texture": "artwork.png",
                     "x": 0,
                     "y": 0,
                     "w": 8,
@@ -266,7 +266,7 @@
         {
             "durationMs": 500,
             "sprite": {
-                "texture": "tranquility-plus-39-palette.png",
+                "texture": "artwork.png",
                 "x": 0,
                 "y": 0,
                 "w": 8,
@@ -280,7 +280,7 @@
         {
             "durationMs": 500,
             "sprite": {
-                "texture": "tranquility-plus-39-palette.png",
+                "texture": "artwork.png",
                 "x": 0,
                 "y": 0,
                 "w": 8,
@@ -294,7 +294,7 @@
         {
             "durationMs": 500,
             "sprite": {
-                "texture": "tranquility-plus-39-palette.png",
+                "texture": "artwork.png",
                 "x": 0,
                 "y": 0,
                 "w": 8,
