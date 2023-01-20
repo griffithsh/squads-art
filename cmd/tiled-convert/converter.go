@@ -266,11 +266,14 @@ func (c *converter) convert() error {
 			}
 
 			for _, obj := range layer.Objects {
-				if strings.ToLower(obj.Type) == "start" {
+				if strings.ToLower(obj.Class) == "start" {
 					k := f.Wtok(obj.X-float64(m.TileWidth/2), obj.Y-float64(m.TileHeight/2))
 					starts = append(starts, k)
 				}
 			}
+		}
+		if len(starts) == 0 {
+			return fmt.Errorf("combat map %q with zeros starts is unusable", filename)
 		}
 		recipe := game.CombatMapRecipe{
 			Hexes:  hexes,

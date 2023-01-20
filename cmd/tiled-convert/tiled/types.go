@@ -1,11 +1,11 @@
 package tiled
 
 type MapObject struct {
-	ID   int     `json:"id"`
-	Name string  `json:"name"`
-	Type string  `json:"type"`
-	X    float64 `json:"x"`
-	Y    float64 `json:"y"`
+	ID    int     `json:"id"`
+	Name  string  `json:"name"`
+	Class string  `json:"class"`
+	X     float64 `json:"x"`
+	Y     float64 `json:"y"`
 	// "width": 0,
 	// "height": 0,
 	// "point": true,
