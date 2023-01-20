@@ -6,7 +6,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "combat/sword-skills.png",
         "x": 0,
         "y": 0,
         "w": 24,
@@ -58,7 +58,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "combat/sword-skills.png",
         "x": 24,
         "y": 0,
         "w": 24,
@@ -116,7 +116,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "combat/sword-skills.png",
         "x": 0,
         "y": 24,
         "w": 24,
@@ -168,7 +168,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "combat/sword-skills.png",
         "x": 72,
         "y": 0,
         "w": 24,
@@ -228,7 +228,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "combat/sword-skills.png",
         "x": 48,
         "y": 0,
         "w": 24,
@@ -254,7 +254,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "combat/sword-skills.png",
         "x": 48,
         "y": 24,
         "w": 24,
@@ -281,7 +281,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "sword-skills.png",
+        "texture": "combat/sword-skills.png",
         "x": 24,
         "y": 24,
         "w": 24,
