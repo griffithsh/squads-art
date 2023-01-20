@@ -6,7 +6,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "bow-skills.png",
+        "texture": "combat/bow-skills.png",
         "x": 0,
         "y": 0,
         "w": 24,
@@ -59,7 +59,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "bow-skills.png",
+        "texture": "combat/bow-skills.png",
         "x": 48,
         "y": 0,
         "w": 24,
@@ -111,7 +111,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "bow-skills.png",
+        "texture": "combat/bow-skills.png",
         "x": 72,
         "y": 0,
         "w": 24,
@@ -171,7 +171,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "bow-skills.png",
+        "texture": "combat/bow-skills.png",
         "x": 96,
         "y": 0,
         "w": 24,
@@ -231,7 +231,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "bow-skills.png",
+        "texture": "combat/bow-skills.png",
         "x": 24,
         "y": 0,
         "w": 24,
@@ -291,7 +291,7 @@
         "Attack"
     ],
     "icon": {
-        "texture": "bow-skills.png",
+        "texture": "combat/bow-skills.png",
         "x": 120,
         "y": 0,
         "w": 24,
