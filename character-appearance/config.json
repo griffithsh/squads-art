@@ -79,31 +79,31 @@
         {
             "name": "pale",
             "colors": {
-                "xlt": "eadce6",
-                "lt": "dfb9ca",
-                "md": "b18b9a",
-                "dk": "855b69",
-                "xdk": "72404a"
+                "xlt": "ffffff",
+                "lt": "ebede9",
+                "md": "e7d5b3",
+                "dk": "d7b594",
+                "xdk": "c09473"
             }
         },
         {
-            "name": "tanned",
+            "name": "pink",
             "colors": {
-                "xlt": "f7e1bc",
-                "lt": "d9b691",
-                "md": "c7977d",
-                "dk": "8d5b57",
-                "xdk": "573222"
+                "xlt": "ebede9",
+                "lt": "e7d5b3",
+                "md": "d7b594",
+                "dk": "df84a5",
+                "xdk": "c65197"
             }
         },
         {
-            "name": "yellow",
+            "name": "jaundice",
             "colors": {
-                "xlt": "e3e7ab",
-                "lt": "cfc281",
-                "md": "cca562",
-                "dk": "836b3f",
-                "xdk": "63492c"
+                "xlt": "ffffff",
+                "lt": "ebede9",
+                "md": "e8c170",
+                "dk": "de9e41",
+                "xdk": "be772b"
             }
         },
         {
