@@ -1,0 +1,102 @@
+{
+  "code": "WATER",
+  "texture": "overworld/tiles/water.png",
+  "variations": [
+    {
+      "chance": 4,
+      "frames": [
+        { "duration": 251, "left": 0, "top": 0 },
+        { "duration": 251, "left": 0, "top": 84 },
+        { "duration": 251, "left": 0, "top": 168 },
+        { "duration": 251, "left": 0, "top": 252 },
+        { "duration": 251, "left": 0, "top": 336 },
+        { "duration": 251, "left": 0, "top": 420 }
+      ],
+      "extraHeight": 20
+    },
+    {
+      "chance": 4,
+      "frames": [
+        { "duration": 249, "left": 0, "top": 84 },
+        { "duration": 249, "left": 0, "top": 168 },
+        { "duration": 249, "left": 0, "top": 252 },
+        { "duration": 249, "left": 0, "top": 336 },
+        { "duration": 249, "left": 0, "top": 420 },
+        { "duration": 249, "left": 0, "top": 0 }
+      ],
+      "extraHeight": 20
+    },
+    {
+      "chance": 8,
+      "frames": [
+        { "duration": 199, "left": 128, "top": 252 },
+        { "duration": 199, "left": 128, "top": 336 },
+        { "duration": 199, "left": 128, "top": 420 },
+        { "duration": 199, "left": 128, "top": 0 },
+        { "duration": 199, "left": 128, "top": 84 },
+        { "duration": 199, "left": 128, "top": 168 }
+      ],
+      "extraHeight": 20
+    },
+    {
+      "chance": 2,
+      "frames": [
+        { "duration": 297, "left": 256, "top": 168 },
+        { "duration": 297, "left": 256, "top": 252 },
+        { "duration": 297, "left": 256, "top": 336 },
+        { "duration": 297, "left": 256, "top": 420 },
+        { "duration": 297, "left": 256, "top": 0 },
+        { "duration": 297, "left": 256, "top": 84 }
+      ],
+      "extraHeight": 20
+    },
+    {
+      "chance": 2,
+      "frames": [
+        { "duration": 299, "left": 256, "top": 84 },
+        { "duration": 299, "left": 256, "top": 168 },
+        { "duration": 299, "left": 256, "top": 252 },
+        { "duration": 299, "left": 256, "top": 336 },
+        { "duration": 299, "left": 256, "top": 420 },
+        { "duration": 299, "left": 256, "top": 0 }
+      ],
+      "extraHeight": 20
+    },
+    {
+      "chance": 2,
+      "frames": [
+        { "duration": 301, "left": 256, "top": 252 },
+        { "duration": 301, "left": 256, "top": 336 },
+        { "duration": 301, "left": 256, "top": 420 },
+        { "duration": 301, "left": 256, "top": 0 },
+        { "duration": 301, "left": 256, "top": 84 },
+        { "duration": 301, "left": 256, "top": 168 }
+      ],
+      "extraHeight": 20
+    },
+    {
+      "chance": 2,
+      "frames": [
+        { "duration": 307, "left": 256, "top": 336 },
+        { "duration": 307, "left": 256, "top": 420 },
+        { "duration": 307, "left": 256, "top": 0 },
+        { "duration": 307, "left": 256, "top": 84 },
+        { "duration": 307, "left": 256, "top": 168 },
+        { "duration": 307, "left": 256, "top": 252 }
+      ],
+      "extraHeight": 20
+    },
+    {
+      "chance": 8,
+      "frames": [
+        { "duration": 279, "left": 384, "top": 336 },
+        { "duration": 279, "left": 384, "top": 420 },
+        { "duration": 279, "left": 384, "top": 0 },
+        { "duration": 279, "left": 384, "top": 84 },
+        { "duration": 279, "left": 384, "top": 168 },
+        { "duration": 279, "left": 384, "top": 252 }
+      ],
+      "extraHeight": 20
+    }
+  ]
+}

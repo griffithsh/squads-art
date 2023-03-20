@@ -1,0 +1,36 @@
+{
+  "code": "GRASS",
+  "texture": "overworld/tiles/grass.png",
+  "variations": [
+    {
+      "chance": 500,
+      "frames": [{ "duration": 1000, "left": 0, "top": 0 }],
+      "extraHeight": 20
+    },
+    {
+      "chance": 500,
+      "frames": [{ "duration": 1000, "left": 0, "top": 84 }],
+      "extraHeight": 20
+    },
+    {
+      "chance": 100,
+      "frames": [{ "duration": 1000, "left": 0, "top": 168 }],
+      "extraHeight": 20
+    },
+    {
+      "chance": 500,
+      "frames": [{ "duration": 1000, "left": 128, "top": 0 }],
+      "extraHeight": 20
+    },
+    {
+      "chance": 50,
+      "frames": [{ "duration": 1000, "left": 128, "top": 84 }],
+      "extraHeight": 20
+    },
+    {
+      "chance": 1,
+      "frames": [{ "duration": 1000, "left": 128, "top": 168 }],
+      "extraHeight": 20
+    }
+  ]
+}

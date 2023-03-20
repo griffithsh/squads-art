@@ -1,0 +1,340 @@
+{
+    "id": "bow-attack",
+    "name": "Attack",
+    "explanation": "Attack a target within 5 range for $DMG-MIN to $DMG-MAX damage",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/bow-skills.png",
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 2,
+            "maxRange": 5
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 20
+    },
+    "attackChanceToHitModifier": 0.0,
+    "effects": [
+        {
+            "when": 400,
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "bow-straight",
+    "name": "Straight Shot",
+    "explanation": "Deal damage at short range with reduced chance to miss",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/bow-skills.png",
+        "x": 48,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 2
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 25
+    },
+    "attackChanceToHitModifier": 0.25,
+    "effects": [
+        {
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "bow-quick",
+    "name": "Quick Shot",
+    "explanation": "Harry your target with a low-cost, low damage attack",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/bow-skills.png",
+        "x": 72,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 3
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 7
+    },
+    "attackChanceToHitModifier": 0,
+    "effects": [
+        {
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "0.75"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "0.75"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "bow-focus",
+    "name": "Focus Shot",
+    "explanation": "Find a moment of zen before unleashing a focused shot at your target, dealing high damage",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/bow-skills.png",
+        "x": 96,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 5
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 50
+    },
+    "attackChanceToHitModifier": 0,
+    "effects": [
+        {
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "3"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "4"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "bow-ballistic",
+    "name": "Ballistic Shot",
+    "explanation": "High arcing shot with elevated chance to miss, and higher damage",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/bow-skills.png",
+        "x": 24,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 3,
+            "maxRange": 7
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 30
+    },
+    "attackChanceToHitModifier": -0.3,
+    "effects": [
+        {
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "3"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "3"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "bow-skirmish",
+    "name": "Skirmish Shot",
+    "explanation": "Hit two targets in a row for $DMG-MIN to $DMG-MAX damage",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/bow-skills.png",
+        "x": 120,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 1
+        },
+        "brush": {
+            "type": "LinearFromOrigin",
+            "linearExtent": 2,
+            "linearDirection": "Forward"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 20
+    },
+    "attackChanceToHitModifier": 0.3,
+    "effects": [
+        {
+            "when": 400,
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}

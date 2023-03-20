@@ -1,0 +1,411 @@
+{
+  "description": "",
+  "over": "WATER",
+  "adjacent": "SAND",
+  "edges": {
+    "texture": "overworld/tiles/sand-encroaching-water-edges.png",
+    "options": {
+      "N": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 336
+            },
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 336
+            },
+            {
+              "duration": 350,
+              "left": 256,
+              "top": 336
+            },
+            {
+              "duration": 350,
+              "left": 384,
+              "top": 336
+            }
+          ],
+          "extraHeight": 20,
+          "extraDepth": 0
+        }
+      ],
+      "NE": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 420
+            },
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 420
+            },
+            {
+              "duration": 350,
+              "left": 256,
+              "top": 420
+            },
+            {
+              "duration": 350,
+              "left": 384,
+              "top": 420
+            }
+          ],
+          "extraHeight": 20,
+          "extraDepth": 0
+        }
+      ],
+      "NW": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 252
+            },
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 252
+            },
+            {
+              "duration": 350,
+              "left": 256,
+              "top": 252
+            },
+            {
+              "duration": 350,
+              "left": 384,
+              "top": 252
+            }
+          ],
+          "extraHeight": 20,
+          "extraDepth": 0
+        }
+      ],
+      "S": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 84
+            },
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 84
+            },
+            {
+              "duration": 350,
+              "left": 256,
+              "top": 84
+            },
+            {
+              "duration": 350,
+              "left": 384,
+              "top": 84
+            }
+          ],
+          "extraHeight": 20,
+          "extraDepth": 0
+        }
+      ],
+      "SE": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 0
+            },
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 0
+            },
+            {
+              "duration": 350,
+              "left": 256,
+              "top": 0
+            },
+            {
+              "duration": 350,
+              "left": 384,
+              "top": 0
+            }
+          ],
+          "extraHeight": 20,
+          "extraDepth": 0
+        }
+      ],
+      "SW": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 168
+            },
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 168
+            },
+            {
+              "duration": 350,
+              "left": 256,
+              "top": 168
+            },
+            {
+              "duration": 350,
+              "left": 384,
+              "top": 168
+            }
+          ],
+          "extraHeight": 20,
+          "extraDepth": 0
+        }
+      ]
+    }
+  },
+  "corners": {
+    "Texture": "overworld/tiles/sand-encroaching-water-corners.png",
+    "Corners": {
+      "N": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 350,
+                "left": 0,
+                "top": 0
+              },
+              {
+                "duration": 350,
+                "left": 0,
+                "top": 16
+              },
+              {
+                "duration": 350,
+                "left": 0,
+                "top": 32
+              },
+              {
+                "duration": 350,
+                "left": 0,
+                "top": 48
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": 1,
+          "Y": -47
+        },
+        "W": 48,
+        "H": 16
+      },
+      "NE": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 350,
+                "left": 48,
+                "top": 0
+              },
+              {
+                "duration": 350,
+                "left": 48,
+                "top": 16
+              },
+              {
+                "duration": 350,
+                "left": 48,
+                "top": 32
+              },
+              {
+                "duration": 350,
+                "left": 48,
+                "top": 48
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": 16,
+          "Y": -15
+        },
+        "W": 48,
+        "H": 16
+      },
+      "SE": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 350,
+                "left": 0,
+                "top": 128
+              },
+              {
+                "duration": 350,
+                "left": 32,
+                "top": 128
+              },
+              {
+                "duration": 350,
+                "left": 64,
+                "top": 128
+              },
+              {
+                "duration": 350,
+                "left": 96,
+                "top": 128
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -32,
+          "Y": 16
+        },
+        "W": 32,
+        "H": 32
+      },
+      "S": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 350,
+                "left": 96,
+                "top": 0
+              },
+              {
+                "duration": 350,
+                "left": 96,
+                "top": 16
+              },
+              {
+                "duration": 350,
+                "left": 96,
+                "top": 32
+              },
+              {
+                "duration": 350,
+                "left": 96,
+                "top": 48
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -81,
+          "Y": -1
+        },
+        "W": 48,
+        "H": 16
+      },
+      "SW": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 350,
+                "left": 144,
+                "top": 0
+              },
+              {
+                "duration": 350,
+                "left": 144,
+                "top": 16
+              },
+              {
+                "duration": 350,
+                "left": 144,
+                "top": 32
+              },
+              {
+                "duration": 350,
+                "left": 144,
+                "top": 48
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -95,
+          "Y": -32
+        },
+        "W": 48,
+        "H": 16
+      },
+      "NW": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 350,
+                "left": 0,
+                "top": 96
+              },
+              {
+                "duration": 350,
+                "left": 32,
+                "top": 96
+              },
+              {
+                "duration": 350,
+                "left": 64,
+                "top": 96
+              },
+              {
+                "duration": 350,
+                "left": 96,
+                "top": 96
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -64,
+          "Y": -48
+        },
+        "W": 32,
+        "H": 32
+      }
+    }
+  }
+}

@@ -1,0 +1,335 @@
+{
+    "id": "sword-attack",
+    "name": "Attack",
+    "explanation": "Attack the target for $DMG-MIN to $DMG-MAX damage",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/sword-skills.png",
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 1
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 20
+    },
+    "effects": [
+        {
+            "when": 100,
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "sword-slash",
+    "name": "Slash",
+    "explanation": "Slash the target",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/sword-skills.png",
+        "x": 24,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 1
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 20
+    },
+    "effects": [
+        {
+            "when": 100,
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        }
+                    ],
+                    "classification": "Attack"
+                },
+                {
+                    "_type": "InjuryEffect",
+                    "type": "BleedingInjury",
+                    "value": 3000,
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "sword-stab",
+    "name": "Stab",
+    "explanation": "Stab the target",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/sword-skills.png",
+        "x": 0,
+        "y": 24,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 1
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 15
+    },
+    "effects": [
+        {
+            "when": 100,
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "sword-hew",
+    "name": "Hew",
+    "explanation": "An overhead hewing strike with a sword",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/sword-skills.png",
+        "x": 72,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 1
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 50
+    },
+    "effects": [
+        {
+            "when": 100,
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "2"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        },
+                        {
+                            "operator": "MultOp",
+                            "variable": "3"
+                        }
+                    ],
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}
+{
+    "id": "sword-parry",
+    "name": "Parry",
+    "explanation": "Lose all AP. Until prepared, if attacked in melee, the first attacker takes 200% weapon damage instead",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/sword-skills.png",
+        "x": 48,
+        "y": 0,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "Untargeted"
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 25
+    }
+}
+{
+    "id": "sword-cunning-parry",
+    "name": "Cunning Parry",
+    "explanation": "Lose all AP. Until prepared, if attacked in melee, the first attacker takes 5000 bleeding damage instead",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/sword-skills.png",
+        "x": 48,
+        "y": 24,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "Untargeted"
+        },
+        "brush": {
+            "type": "SingleHex"
+        }
+    },
+    "targetingBrush": "None",
+    "costs": {
+        "CostsActionPoints": 25
+    }
+}
+{
+    "id": "sword-rogue-slash",
+    "name": "Rogue Slash",
+    "explanation": "All adjacent suffer Bleeding for 2000",
+    "tags": [
+        "Attack"
+    ],
+    "icon": {
+        "texture": "combat/sword-skills.png",
+        "x": 24,
+        "y": 24,
+        "w": 24,
+        "h": 24
+    },
+    "targeting": {
+        "selectable": {
+            "type": "SelectWithin",
+            "minRange": 1,
+            "maxRange": 1
+        },
+        "brush": {
+            "type": "WithinRangeOfOrigin",
+            "minRange": 1,
+            "maxRange": 1
+        }
+    },
+    "costs": {
+        "CostsActionPoints": 25
+    },
+    "effects": [
+        {
+            "when": 150,
+            "whenPoint": "Apex",
+            "what": [
+                {
+                    "_type": "DamageEffect",
+                    "min": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MIN"
+                        }
+                    ],
+                    "max": [
+                        {
+                            "operator": "AddOp",
+                            "variable": "$DMG-MAX"
+                        }
+                    ],
+                    "classification": "Attack"
+                },
+                {
+                    "_type": "InjuryEffect",
+                    "type": "BleedingInjury",
+                    "value": 1500,
+                    "classification": "Attack"
+                }
+            ]
+        }
+    ]
+}

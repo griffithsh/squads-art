@@ -1,0 +1,375 @@
+{
+  "description": "",
+  "over": "SAND",
+  "adjacent": "GRASS",
+  "edges": {
+    "texture": "overworld/tiles/grass-encroaching-sand.png",
+    "options": {
+      "N": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 272
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        },
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 272
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        }
+      ],
+      "NE": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 340
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        },
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 340
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        }
+      ],
+      "NW": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 204
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        },
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 204
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        }
+      ],
+      "S": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 68
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        },
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 68
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        }
+      ],
+      "SE": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 0
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        },
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 0
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        }
+      ],
+      "SW": [
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 0,
+              "top": 136
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        },
+        {
+          "chance": 1,
+          "frames": [
+            {
+              "duration": 350,
+              "left": 128,
+              "top": 136
+            }
+          ],
+          "extraHeight": 4,
+          "extraDepth": 0
+        }
+      ]
+    }
+  },
+  "corners": {
+    "texture": "overworld/tiles/grass-encroaching-sand.png",
+    "Corners": {
+      "N": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 256,
+                "top": 0
+              }
+            ],
+            "extraHeight": 4,
+            "extraDepth": 0
+          },
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 256,
+                "top": 16
+              }
+            ],
+            "extraHeight": 4,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -20,
+          "Y": -50
+        },
+        "W": 16,
+        "H": 16
+      },
+      "NE": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 272,
+                "top": 0
+              }
+            ],
+            "extraHeight": 4,
+            "extraDepth": 0
+          },
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 272,
+                "top": 16
+              }
+            ],
+            "extraHeight": 4,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": 6,
+          "Y": -18
+        },
+        "W": 16,
+        "H": 16
+      },
+      "SE": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 288,
+                "top": 0
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          },
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 288,
+                "top": 16
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -31,
+          "Y": 9
+        },
+        "W": 16,
+        "H": 16
+      },
+      "S": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 304,
+                "top": 0
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          },
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 304,
+                "top": 16
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -92,
+          "Y": 0
+        },
+        "W": 16,
+        "H": 16
+      },
+      "SW": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 320,
+                "top": 0
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          },
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 320,
+                "top": 16
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -118,
+          "Y": -32
+        },
+        "W": 16,
+        "H": 16
+      },
+      "NW": {
+        "Options": [
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 336,
+                "top": 0
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          },
+          {
+            "chance": 1,
+            "frames": [
+              {
+                "duration": 0,
+                "left": 336,
+                "top": 16
+              }
+            ],
+            "extraHeight": 0,
+            "extraDepth": 0
+          }
+        ],
+        "Offset": {
+          "X": -81,
+          "Y": -56
+        },
+        "W": 16,
+        "H": 16
+      }
+    }
+  }
+}

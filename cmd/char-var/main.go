@@ -9,6 +9,7 @@ import (
 	"image/png"
 	"io/ioutil"
 	"os"
+	"path"
 	"path/filepath"
 	"strings"
 
@@ -70,6 +71,10 @@ func main() {
 				os.Exit(1)
 			}
 			input, _, err := image.Decode(bytes.NewReader(inBytes))
+			if err != nil {
+				fmt.Printf("decode bytes %s: %v\n", "character-appearance/"+s.Input, err)
+				os.Exit(1)
+			}
 			bounds := input.Bounds()
 			w := (bounds.Max.X - bounds.Min.X)
 			h := (bounds.Max.Y - bounds.Min.Y)
@@ -111,7 +116,9 @@ func main() {
 							fmt.Printf("encode appearance %s: %v", appearanceFile, err)
 							os.Exit(1)
 						}
-						ioutil.WriteFile("character-appearance/"+appearanceFile, buf.Bytes(), 0644)
+						if err := ioutil.WriteFile("packed/content/character-appearance/"+appearanceFile, buf.Bytes(), 0644); err != nil {
+							panic(fmt.Sprintf("writing file %v", err))
+						}
 
 						raw, _, err := image.Decode(bytes.NewReader(inBytes))
 						input := image.NewNRGBA(image.Rectangle{image.Point{0, 0}, image.Point{w, h}})
@@ -145,7 +152,7 @@ func main() {
 				}
 			}
 			// write out the file here ...
-			f, err := os.Create(imageFile)
+			f, err := os.Create(path.Join("packed", "content", imageFile))
 			if err != nil {
 				panic(fmt.Sprintf("create canvas file %s: %v", imageFile, err))
 			}
