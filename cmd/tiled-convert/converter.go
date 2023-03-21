@@ -26,6 +26,7 @@ type flattenedTile struct {
 	obstacle   game.ObstacleType
 	obscures   tiled.ObscuresProperty
 }
+
 type converter struct {
 	maps     map[string]tiled.Map
 	tilesets map[string]tiled.Tileset
@@ -136,11 +137,11 @@ func getObscuredOtherTiles(tileID int, tiles []tiled.TilesetTile) (tiled.Obscure
 
 						m, err := strconv.Atoi(strings.TrimSpace(vals[0]))
 						if err != nil {
-							return nil, fmt.Errorf("Atoi: %v", err)
+							return nil, fmt.Errorf("strconv.Atoi: %v", err)
 						}
 						n, err := strconv.Atoi(strings.TrimSpace(vals[1]))
 						if err != nil {
-							return nil, fmt.Errorf("Atoi: %v", err)
+							return nil, fmt.Errorf("strconv.Atoi: %v", err)
 						}
 						result = append(result, tiled.ObscuresPropertyCoordinate{M: m, N: n})
 					}
@@ -175,6 +176,7 @@ func getZIndex(props []tiled.Property) int {
 	}
 	return 0
 }
+
 func (c *converter) convert() error {
 	f := geom.NewField(34, 19, 40)
 	for filename, m := range c.maps {
@@ -246,13 +248,13 @@ func (c *converter) convert() error {
 					Position: k,
 					Obstacle: flat.obstacle,
 					Visuals: []game.CombatMapRecipeVisual{
-						game.CombatMapRecipeVisual{
+						{
 							Layer:    getZIndex(layer.Properties),
 							XOffset:  flat.xOff,
 							YOffset:  flat.yOff,
 							Obscures: realise(k, flat.obscures),
 							Frames: []game.CombatMapRecipeHexFrame{
-								game.CombatMapRecipeHexFrame{
+								{
 									Texture: flat.texture,
 									X:       flat.x,
 									Y:       flat.y,

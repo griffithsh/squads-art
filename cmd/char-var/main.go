@@ -151,6 +151,7 @@ func main() {
 					}
 				}
 			}
+
 			// write out the file here ...
 			f, err := os.Create(path.Join("packed", "content", imageFile))
 			if err != nil {
