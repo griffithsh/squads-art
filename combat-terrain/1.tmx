@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.3" orientation="hexagonal" renderorder="right-up" width="12" height="12" tilewidth="72" tileheight="40" infinite="0" hexsidelength="34" staggeraxis="x" staggerindex="odd" nextlayerid="7" nextobjectid="4">
+<map version="1.9" tiledversion="1.9.2" orientation="hexagonal" renderorder="right-up" width="12" height="12" tilewidth="72" tileheight="40" infinite="0" hexsidelength="34" staggeraxis="x" staggerindex="odd" nextlayerid="7" nextobjectid="4">
  <tileset firstgid="1" source="v1.tsx"/>
  <tileset firstgid="13" source="tree-v1.tsx"/>
  <layer id="1" name="Ground" width="12" height="12">
@@ -79,10 +79,10 @@
 </data>
  </layer>
  <objectgroup id="3" name="starts">
-  <object id="1" type="Start" x="142" y="137">
+  <object id="1" class="Start" x="142" y="137">
    <point/>
   </object>
-  <object id="2" type="Start" x="458" y="378">
+  <object id="2" class="Start" x="458" y="378">
    <point/>
   </object>
  </objectgroup>

@@ -1,18 +1,20 @@
 #!/bin/sh -eu
 
-# prepare Tiled Map Editor combat terrain resources for packing.
+# Export all the XCFs as PNGs
+./export-xcfs.sh
+
+# Prepare Tiled Map Editor combat terrain resources for packing, moving them into packed/content.
 ./tiled-export.sh
-go run ./cmd/tiled-convert -in ./combat-terrain -out ./combat-terrain
 go run ./cmd/tiled-convert -in ./combat-terrain -out ./packed/content/combat-terrain
+find combat-terrain -name '*.png' -exec cp "{}" packed/content/"{}" \;
 rm ./combat-terrain/*.export
 
-# cleanup previous run
-rm -f ./packed/content/character-appearance/*.appearance
-rm -f ./packed/content/character-appearance/*.variations.png
+# Cleanup previous run
+find ./packed/content/character-appearance/ -type f | egrep '(\.appearance|\.variations.png)$' | xargs rm -f
 
 go run ./cmd/char-var
 
-# pack game data into squads.data
+# Pack game data into squads.data
 ./pack.sh
 
-rm ./packed/content/character-appearance/*.appearance
+find ./packed/content/character-appearance/ -type f | egrep '(\.appearance|\.variations.png)$' | xargs rm -f
