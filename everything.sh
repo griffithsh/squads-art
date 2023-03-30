@@ -18,3 +18,5 @@ go run ./cmd/char-var
 ./pack.sh
 
 find ./packed/content/character-appearance/ -type f | egrep '(\.appearance|\.variations.png)$' | xargs rm -f
+
+find . -type f -iname '*.xcf' | sed "s/^.\///g" | xargs -I{} ./find-in-xcf-exporter.sh {}
