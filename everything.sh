@@ -10,13 +10,13 @@ find combat-terrain -name '*.png' -exec cp "{}" packed/content/"{}" \;
 rm ./combat-terrain/*.export
 
 # Cleanup previous run
-find ./packed/content/character-appearance/ -type f | egrep '(\.appearance|\.variations.png)$' | xargs rm -f
+find ./packed/content/character-appearance/ -type f | grep -E '(\.appearance|\.variations.png)$' | xargs rm -f
 
 go run ./cmd/char-var
 
 # Pack game data into squads.data
 ./pack.sh
 
-find ./packed/content/character-appearance/ -type f | egrep '(\.appearance|\.variations.png)$' | xargs rm -f
+find ./packed/content/character-appearance/ -type f | grep -E '(\.appearance|\.variations.png)$' | xargs rm -f
 
 find . -type f -iname '*.xcf' | sed "s/^.\///g" | xargs -I{} ./find-in-xcf-exporter.sh {}
